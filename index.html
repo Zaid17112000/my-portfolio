@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <!-- style.css -->
+    <link rel="stylesheet" href="dist/style.css">
+    <!-- font -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- remix cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+    <!-- css -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            /* font-weight: <weight>; */
+            font-style: normal;
+        }
+
+        .footer-basic {
+            padding: 40px 0;
+            background-color: #ffffff;
+            color: #4b4c4d;
+        }
+
+        .footer-basic ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .footer-basic li {
+            padding: 0 10px;
+        }
+
+        .footer-basic ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .footer-basic ul a:hover {
+            opacity: 1;
+        }
+
+        .footer-basic .social {
+            text-align: center;
+            padding-bottom: 25px;
+        }
+
+        .footer-basic .social>a {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin: 0 8px;
+            color: inherit;
+            opacity: 0.75;
+        }
+
+        .footer-basic .social>a:hover {
+            opacity: 0.9;
+        }
+
+        .footer-basic .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 0;
+        }
+
+        /* Credit to https://epicbootstrap.com/snippets/footer-basic */
+    </style>
+</head>
+
+<body>
+    <header class="py-5">
+        <div class="container flex justify-between items-center px-12 mx-auto max-w-[1120px]">
+            <!-- <a href="#" class="blue-text font-bold text-xl">Zaid el khobzi</a> -->
+            <div class="flex justify-center items-center gap-x-7">
+                <a href="index.html">
+                    <button class="blue-bg w-14 h-14 rounded-full flex items-center justify-center">
+                        <span class="text-white text-4xl font-bold">Z</span>
+                    </button>
+                </a>
+                <a href="./public/cv/CV_Resume_en.pdf" download
+                    class="relative overflow-hidden cursor-pointer h-14 flex items-center px-6 border border-[#1e30f3] rounded-full group">
+                    <span
+                        class="absolute inset-x-0 bottom-0 h-0 bg-[#1e30f3] transition-all duration-500 group-hover:h-full z-0"></span>
+                    <span
+                        class="relative z-10 text-xl font-medium text-black transition-colors duration-500 group-hover:text-white">
+                        Download PDF Resume
+                    </span>
+                </a>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex gap-x-5">
+                    <li><a href="index.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Home</a></li>
+                    <li><a href="#about" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">About</a></li>
+                    <li><a href="#experience" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Experience</a></li>
+                    <li><a href="#education-skills" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Education & Skills</a></li>
+                    <li><a href="./projects.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Projects</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger" class="block cursor-pointer md:hidden">
+                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+                    viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                </svg>
+            </div>
+        </div>
+        <nav class="hidden py-5 my-5 bg-[#f8f9fa]" id="mobile-menu">
+            <ul class="flex flex-col items-center gap-x-5 gap-y-5">
+                <li><a href="index.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Home</a></li>
+                <li><a href="#about" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">About</a></li>
+                <li><a href="#experience" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Experience</a></li>
+                <li><a href="#education-skills" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Education & Skills</a></li>
+                <li><a href="./projects.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-12 max-[1029.34px]:pt-0">
+        <section id="hero">
+            <div class="container px-12 mx-auto max-w-[1120px]">
+                <div
+                    class="flex justify-between items-center max-[1029.34px]:flex-col-reverse max-[1029.34px]:gap-y-10 max-[1029.34px]:justify-center">
+                    <div
+                        class="flex flex-col space-y-5 w-1/2 max-[1029.34px]:items-center max-[1029.34px]:w-auto max-[1029.34px]:text-center ">
+                        <!-- <p
+                            class="px-[5.8px] py-[2.2px] w-fit rounded-[5px] bg-gradient text-[10px] text-white font-bold">
+                            Design · Development · Marketing</p> -->
+                        <div class="max-w-[450px]">
+                            <span class="text-[#C93F1D] font-bold tracking-wider mb-1.5">HELLO</span>
+                            <h1
+                                class="m-0 pb-5 text-[50px] font-bold leading-[1.1] max-[1029.34px]:text-[40px] max-[1029.34px]:leading-[1.2]">
+                                I'm Zaid El Khobzi
+                            </h1>
+                            <p class="text-[18px]">
+                                I'm a Web Developer based in Tanger, Morocco. I strive to build immersive and beautiful
+                                web applications through carefully crafted code and user-centric design.
+                            </p>
+                        </div>
+                        <!-- <p class="text-[#6c757d] text-[28px] font-[200]">I can help your business to</p>
+                        <h1 class="pb-5 max-w-[340px] text-5xl font-bold bg-gradient max-[1029.34px]:max-w-full"
+                            style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Get online and
+                            grow fast</h1> -->
+                        <div>
+                            <a href="./public/cv/CV_Resume_en.pdf" download>
+                                <button
+                                    class="py-3 px-9 mr-5 rounded-[10px] blue-bg text-white text-[11px] font-bold">Resume</button>
+                            </a>
+                            <button onclick="window.location.href='./projects.html'"
+                                class="py-3 px-9 rounded-[10px] border text-[11px] font-bold hover:bg-[#212529] hover:text-white">Projects</button>
+                        </div>
+                    </div>
+                    <div class="w-1/2  max-[1029.34px]:mt-10 max-[1029.34px]:w-auto">
+                        <div class="relative mt-[72.1px] mx-auto w-[35vw] h-[35vw] rounded-[25px] bg-gradient">
+                            <!-- https://startbootstrap.github.io/startbootstrap-personal/assets/profile.png -->
+                            <img src="./public/images/hero/hero-image.png"
+                                class="absolute bottom-0 left-1/2 right-1/2 -translate-x-1/2 h-[45vw]">
+                            <div class="dots-2 absolute w-[1.5vw] top-7 right-[1vw]"
+                                bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                <!-- SVG Dots-->
+                                <svg version="1.1" class="fill-white" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4"
+                                    xml:space="preserve"
+                                    bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                                        bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                        <path
+                                            d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:579,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:641}">
+                                        </path>
+                                        <path
+                                            d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:590,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:652}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:590,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:652}">
+                                        </path>
+                                        <path
+                                            d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:602,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:664}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:602,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:664}">
+                                        </path>
+                                        <path
+                                            d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:613,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:675}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:613,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:675}">
+                                        </path>
+                                        <path
+                                            d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:625,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:687}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:625,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:687}">
+                                        </path>
+                                        <path
+                                            d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:636,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:698}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:636,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:698}">
+                                        </path>
+                                        <path
+                                            d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:648,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:710}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:648,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:710}">
+                                        </path>
+                                        <path
+                                            d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:659,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:721}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:659,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:721}">
+                                        </path>
+                                        <path
+                                            d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:671,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:733}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:671,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:733}">
+                                        </path>
+                                        <path
+                                            d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:682,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:744}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:682,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:744}">
+                                        </path>
+                                    </g>
+                                </svg>
+                                <!-- END of SVG dots-->
+                            </div>
+                            <div class="dots-2 absolute w-[1.5vw] top-12 -right-[2vw]"
+                                bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                <!-- SVG Dots-->
+                                <svg version="1.1" class="fill-[#1e30f3]" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4"
+                                    xml:space="preserve"
+                                    bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                                        bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                        <path
+                                            d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:579,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:641}">
+                                        </path>
+                                        <path
+                                            d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:590,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:652}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:590,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:652}">
+                                        </path>
+                                        <path
+                                            d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:602,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:664}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:602,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:664}">
+                                        </path>
+                                        <path
+                                            d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:613,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:675}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:613,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:675}">
+                                        </path>
+                                        <path
+                                            d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:625,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:687}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:625,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:687}">
+                                        </path>
+                                        <path
+                                            d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:636,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:698}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:636,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:698}">
+                                        </path>
+                                        <path
+                                            d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:648,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:710}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:648,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:710}">
+                                        </path>
+                                        <path
+                                            d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:659,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:721}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:659,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:721}">
+                                        </path>
+                                        <path
+                                            d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:671,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:733}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:671,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:733}">
+                                        </path>
+                                        <path
+                                            d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:682,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:744}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:682,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:744}">
+                                        </path>
+                                    </g>
+                                </svg>
+                                <!-- END of SVG dots-->
+                            </div>
+                            <div class="dots-2 absolute w-[1.5vw] bottom-12 left-[1vw]"
+                                bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                <!-- SVG Dots-->
+                                <svg version="1.1" class="fill-white" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4"
+                                    xml:space="preserve"
+                                    bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                                        bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                        <path
+                                            d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:579,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:641}">
+                                        </path>
+                                        <path
+                                            d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:590,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:652}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:590,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:652}">
+                                        </path>
+                                        <path
+                                            d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:602,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:664}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:602,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:664}">
+                                        </path>
+                                        <path
+                                            d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:613,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:675}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:613,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:675}">
+                                        </path>
+                                        <path
+                                            d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:625,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:687}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:625,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:687}">
+                                        </path>
+                                        <path
+                                            d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:636,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:698}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:636,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:698}">
+                                        </path>
+                                        <path
+                                            d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:648,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:710}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:648,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:710}">
+                                        </path>
+                                        <path
+                                            d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:659,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:721}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:659,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:721}">
+                                        </path>
+                                        <path
+                                            d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:671,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:733}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:671,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:733}">
+                                        </path>
+                                        <path
+                                            d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:682,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:744}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:682,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:744}">
+                                        </path>
+                                    </g>
+                                </svg>
+                                <!-- END of SVG dots-->
+                            </div>
+                            <div class="dots-2 absolute w-[1.5vw] bottom-7 -left-[2vw]"
+                                bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                <!-- SVG Dots-->
+                                <svg version="1.1" class="fill-[#1e30f3]" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4"
+                                    xml:space="preserve"
+                                    bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                                        bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:17,&quot;h&quot;:108,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                        <path
+                                            d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:579,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:641}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:579,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:641}">
+                                        </path>
+                                        <path
+                                            d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:590,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:652}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:590,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:652}">
+                                        </path>
+                                        <path
+                                            d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:602,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:664}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:602,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:664}">
+                                        </path>
+                                        <path
+                                            d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:613,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:675}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:613,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:675}">
+                                        </path>
+                                        <path
+                                            d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:625,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:687}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:625,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:687}">
+                                        </path>
+                                        <path
+                                            d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:636,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:698}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:636,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:698}">
+                                        </path>
+                                        <path
+                                            d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:648,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:710}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:648,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:710}">
+                                        </path>
+                                        <path
+                                            d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:659,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:721}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:659,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:721}">
+                                        </path>
+                                        <path
+                                            d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:671,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:733}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:671,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:733}">
+                                        </path>
+                                        <path
+                                            d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
+                                            bis_size="{&quot;x&quot;:797,&quot;y&quot;:682,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:797,&quot;abs_y&quot;:744}">
+                                        </path>
+                                        <path
+                                            d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
+                                            bis_size="{&quot;x&quot;:809,&quot;y&quot;:682,&quot;w&quot;:5,&quot;h&quot;:5,&quot;abs_x&quot;:809,&quot;abs_y&quot;:744}">
+                                        </path>
+                                    </g>
+                                </svg>
+                                <!-- END of SVG dots-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-details" class="mt-5">
+            <div class="border-t border-[#f0f0f0]">
+                <div class="container px-12">
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-6 md:py-7">
+                        <div
+                            class="flex flex-wrap items-center justify-center md:justify-start gap-1.5 md:gap-5 lg:gap-11">
+                            <a class="flex items-center gap-2 lg:gap-4 text-sm md:text-base" href="#">
+                                <img alt="email" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    class="min-w-[24px] min-h-[24px]" src="./public/images/icon/mail-icon.svg"
+                                    style="color: transparent;">
+                                <h6 class="text-sm md:text-base xl:text-xl hover:text-primary">zaydds2020@gmail.com</h6>
+                            </a>
+                            <a class="flex items-center gap-2 lg:gap-4 text-sm md:text-base" href="#">
+                                <img alt="phone" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    class="min-w-[24px] min-h-[24px]" src="./public/images/icon/call-icon.svg"
+                                    style="color: transparent;">
+                                <h6 class="text-sm md:text-base xl:text-xl hover:text-primary">0614399750</h6>
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-end gap-4 md:gap-2.5">
+                            <a href="https://github.com/Zaid17112000">
+                                <img alt="github" loading="lazy" width="30" height="30" decoding="async" data-nimg="1"
+                                    class="hover:opacity-80" src="./public/images/icon/github-icon.svg"
+                                    style="color: transparent;">
+                            </a>
+                            <a href="www.linkedin.com/in/zaydelkhobzi">
+                                <img alt="linkedin" loading="lazy" width="30" height="30" decoding="async" data-nimg="1"
+                                    class="hover:opacity-80" src="./public/images/icon/linkedin-icon.svg"
+                                    style="color: transparent;">
+                            </a>
+                            <a href="https://web.facebook.com/zayd.elkhobzi/">
+                                <img alt="facebook" loading="lazy" width="30" height="30" decoding="async" data-nimg="1"
+                                    class="hover:opacity-80" src="./public/images/icon/facebook-icon.svg"
+                                    style="color: transparent;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container px-12 relative bg-[#F0F0F0] py-10 md:py-32">
+                <div class="absolute top-0 w-full px-9">
+                    <img alt="resume-bg-img" loading="lazy" width="1200" height="348" decoding="async" data-nimg="1"
+                        class="w-full" style="color:transparent" src="./public/images/home/about-me/resume-bg-img.svg">
+                </div>
+                <div class="relative z-10">
+                    <div class="container">
+                        <div class="flex items-center justify-between gap-2 border-b border-black pb-7">
+                            <h2 class="text-[3.75rem] font-bold">About Me</h2>
+                            <p class="text-xl text-primary">( 01 )</p>
+                        </div>
+                        <div class="pt-10 xl:pt-16 flex gap-10 items-center justify-between">
+                            <div class="max-[1029.39px]:hidden w-[303px] h-[440px] hidden lg:flex">
+                                <img alt="about-banner" loading="lazy" width="303" height="440" decoding="async"
+                                    data-nimg="1" class="w-full h-full" style="color:transparent"
+                                    src="./public/images/home/about-me/about-banner-img.svg">
+                            </div>
+                            <div class="w-full lg:max-w-2xl flex-1">
+                                <p class="text-secondary">I am a passionate web developer dedicated to designing and
+                                    building modern, stylish, and user-focused digital experiences. I create
+                                    high-quality websites, web applications, and online stores with careful attention to
+                                    design, performance, and usability. Autonomous, detail-oriented, and driven, I
+                                    thrive in dynamic environments where I can contribute my skills to innovative
+                                    projects and help bring impactful ideas to life.</p>
+                                <div class="pt-8 xl:pt-14 flex flex-col sm:flex-row items-center gap-4">
+                                    <div class="flex items-center gap-3.5">
+                                        <img alt="lang-icon" loading="lazy" width="30" height="30" decoding="async"
+                                            data-nimg="1" style="color:transparent"
+                                            src="./public/images/icon/lang-icon.svg">
+                                        <p class="text-base xl:text-xl text-black">Language</p>
+                                    </div>
+                                    <div class="flex flex-wrap justify-center items-center gap-2.5">
+                                        <p
+                                            class="bg-white py-2 md:py-3.5 px-4 md:px-5 w-fit rounded-full text-base xl:text-xl">
+                                            English</p>
+                                        <p
+                                            class="bg-white py-2 md:py-3.5 px-4 md:px-5 w-fit rounded-full text-base xl:text-xl">
+                                            French</p>
+                                        <p
+                                            class="bg-white py-2 md:py-3.5 px-4 md:px-5 w-fit rounded-full text-base xl:text-xl">
+                                            Arabic</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div>
+                <div class="container px-12 relative py-10 md:py-32">
+                    <div class="flex items-center justify-between gap-2 border-b border-black pb-7 mb-9 md:mb-16">
+                        <h2 class="text-[3.75rem] font-bold">Experience</h2>
+                        <p class="text-xl text-primary">( 02 )</p>
+                    </div>
+                    <div class="space-y-7 md:space-y-12">
+                        <div
+                            class="grid max-[1029.34px]:grid-cols-1 grid-cols-3 gap-2.5 md:gap-4 xl:gap-8 items-start relative">
+                            <div class="">
+                                <h3 class="font-bold mb-2 text-black text-3xl">01/07/2025 - 28/07/2025</h3>
+                            </div>
+                            <div class=" relative">
+                                <div class="max-[1029.39px]:pl-0 pl-4">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="text-xl text-black font-normal">Final Year Internship</span>
+                                    </div>
+                                    <p class="text-base font-normal min-w-[200px] max-w-[600px]"
+                                        style="font-style: oblique;">La pharmacie Ben Said, Asilah</p>
+                                </div>
+                            </div>
+                            <div class="pl-8">
+                                <p class="leading-relaxed text-base">
+                                <ul style="list-style: disc;">
+                                    <li>Managed medication and suppliers</li>
+                                    <li>Management of the basket and the order process</li>
+                                    <li>Authentication and user management via Laravel Breeze</li>
+                                    <li>Interactive dashboard for activity tracking</li>
+                                    <li>Generation of detailed reports (sales, stock, suppliers)</li>
+                                    <li>A responsive and user-friendly interface for a better user experience</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="grid max-[1029.34px]:grid-cols-1 grid-cols-3 gap-2.5 md:gap-4 xl:gap-8 items-start relative">
+                            <div class="">
+                                <h3 class="font-bold mb-2 text-black text-3xl">04/2023 – 05/2024</h3>
+                            </div>
+                            <div class=" relative">
+                                <div class="max-[1029.39px]:pl-0 pl-4">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="text-xl text-black font-normal">Marketing Mailer</span>
+                                    </div>
+                                    <p class="text-base font-normal min-w-[200px] max-w-[600px]"
+                                        style="font-style: oblique;">La société DATA GRID CONNECT SARL, Tanger</p>
+                                </div>
+                            </div>
+                            <div class="pl-8">
+                                <p class="leading-relaxed text-base">
+                                <ul style="list-style: disc;">
+                                    <li>Creation and sending of email marketing campaigns.</li>
+                                    <li>Monitoring campaign performance (opening rate, clicks, conversions).</li>
+                                    <li>Analysis of reports and recommendations to improve future campaigns.</li>
+                                    <li>Collaboration with the marketing team to coordinate campaigns and content.</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="grid max-[1029.34px]:grid-cols-1 grid-cols-3 gap-2.5 md:gap-4 xl:gap-8 items-start relative">
+                            <div class="">
+                                <h3 class="font-bold mb-2 text-black text-3xl">07/2022 – 09/2022</h3>
+                            </div>
+                            <div class=" relative">
+                                <div class="max-[1029.39px]:pl-0 pl-4">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="text-xl text-black font-normal">Final Year Internship</span>
+                                    </div>
+                                    <p class="text-base font-normal" style="font-style: oblique;">La société Ava Marie,
+                                        Tanger</p>
+                                </div>
+                            </div>
+                            <div class="pl-8">
+                                <p class="leading-relaxed text-base">
+                                <ul style="list-style: disc;">
+                                    <li>Implementation of a File System and Backup on a NAS Storage Server</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education-skills">
+            <div class="border-t border-softGray overflow-hidden">
+                <div class="container px-12 relative py-10 md:py-32">
+                    <img alt="vector" loading="lazy" width="260" height="170" decoding="async" data-nimg="1"
+                        class="no-print absolute top-0 left-0 transform -translate-y-1/2" style="color:transparent"
+                        src="./public/images/home/education-skill/edu-skill-vector.svg">
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between gap-2 border-b border-black pb-7 mb-9 xl:mb-16">
+                            <h2 class="text-[3.75rem] font-bold">Education &amp; Skills</h2>
+                            <p class="text-xl text-primary">( 03 )</p>
+                        </div>
+                        <div class="flex flex-col lg:flex-row gap-10 xl:gap-20">
+                            <div class="w-full lg:max-w-md flex flex-col gap-0 xl:gap-8">
+                                <div class="flex items-start gap-6 mb-[20px]">
+                                    <div
+                                        class="no-print mt-2.5 w-3.5 h-3.5 rounded-full border-1 bg-white flex items-center justify-center border-black">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-black"></div>
+                                    </div>
+                                    <div class="flex-1 flex flex-col gap-2 leading-[1.1]">
+                                        <h5 class="text-2xl font-bold">Certificate in Web Development</h5>
+                                        <span class="text-primary text-[15px]">2024-2025</span>
+                                        <p class="font-normal" style="font-style: oblique;">Solicode, Tanger</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-6 mb-[20px]">
+                                    <div
+                                        class="no-print mt-2.5 w-3.5 h-3.5 rounded-full border-1 bg-white flex items-center justify-center border-black">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-black"></div>
+                                    </div>
+                                    <div class="flex-1 flex flex-col gap-2 leading-[1.1]">
+                                        <h5 class="text-2xl font-bold">Professional Bachelor's Degree in Networks and
+                                            Telecommunications</h5>
+                                        <span class="text-primary text-[15px]">2021-2022</span>
+                                        <p class="font-normal" style="font-style: oblique;">Suptem, École Supérieure des
+                                            Sciences Techniques et de Management</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-6">
+                                    <div
+                                        class="no-print mt-2.5 w-3.5 h-3.5 rounded-full border-1 bg-white flex items-center justify-center border-black">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-black"></div>
+                                    </div>
+                                    <div class="flex-1 flex flex-col gap-2 leading-[1.1]">
+                                        <h5 class="text-2xl font-bold">Specialized Technician Diploma in Computer
+                                            Networks</h5>
+                                        <span class="text-primary text-[15px]">2018-2020</span>
+                                        <p class="font-normal" style="font-style: oblique;">Institut Spécialisé de
+                                            Technologie Appliquée NTIC Tanger OFPPT, Tanger</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 xs:grid-cols-3 gap-5 xl:gap-7 w-full">
+                                <div
+                                    class="p-4 xl:p-6 border border-softGray rounded-lg flex flex-col gap-5 sm:gap-10 items-center justify-between">
+                                    <div class="flex flex-col items-center gap-5">
+                                        <img alt="icon" loading="lazy" width="70" height="70" decoding="async"
+                                            data-nimg="1" src="./public/images/home/education-skill/html.webp"
+                                            style="color: transparent;">
+                                        <p class="text-black font-normal">HTML</p>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-4 xl:p-6 border border-softGray rounded-lg flex flex-col gap-5 sm:gap-10 items-center justify-between">
+                                    <div class="flex flex-col items-center gap-5">
+                                        <img alt="icon" loading="lazy" width="70" height="70" decoding="async"
+                                            data-nimg="1" src="./public/images/home/education-skill/css.webp"
+                                            style="color: transparent;">
+                                        <p class="text-black font-normal">CSS</p>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-4 xl:p-6 border border-softGray rounded-lg flex flex-col gap-5 sm:gap-10 items-center justify-between">
+                                    <div class="flex flex-col items-center gap-5">
+                                        <img alt="icon" loading="lazy" width="70" height="70" decoding="async"
+                                            data-nimg="1" src="./public/images/home/education-skill/js.webp"
+                                            style="color: transparent;">
+                                        <p class="text-black font-normal">JavaScript</p>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#C0D8E0"></rect>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-4 xl:p-6 border border-softGray rounded-lg flex flex-col gap-5 sm:gap-10 items-center justify-between">
+                                    <div class="flex flex-col items-center gap-5">
+                                        <img alt="icon" loading="lazy" width="70" height="70" decoding="async"
+                                            data-nimg="1" src="./public/images/home/education-skill/tailwind.webp"
+                                            style="color: transparent;">
+                                        <p class="text-black font-normal">Tailwind</p>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#C0D8E0"></rect>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-4 xl:p-6 border border-softGray rounded-lg flex flex-col gap-5 sm:gap-10 items-center justify-between">
+                                    <div class="flex flex-col items-center gap-5">
+                                        <img alt="icon" loading="lazy" width="70" height="70" decoding="async"
+                                            data-nimg="1" src="./public/images/home/education-skill/react.webp"
+                                            style="color: transparent;">
+                                        <p class="text-black font-normal">React</p>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#C0D8E0"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#C0D8E0"></rect>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-4 xl:p-6 border border-softGray rounded-lg flex flex-col gap-5 sm:gap-10 items-center justify-between">
+                                    <div class="flex flex-col items-center gap-5">
+                                        <img alt="icon" loading="lazy" width="70" height="70" decoding="async"
+                                            data-nimg="1" src="./public/images/home/education-skill/php.webp"
+                                            style="color: transparent;">
+                                        <p class="text-black font-normal">PHP</p>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#C0D8E0"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#C0D8E0"></rect>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-4 xl:p-6 border border-softGray rounded-lg flex flex-col gap-5 sm:gap-10 items-center justify-between">
+                                    <div class="flex flex-col items-center gap-5">
+                                        <img alt="icon" loading="lazy" width="70" height="70" decoding="async"
+                                            data-nimg="1" src="./public/images/home/education-skill/laravel.webp"
+                                            style="color: transparent;">
+                                        <p class="text-black font-normal">Laravel</p>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#FE4300"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#C0D8E0"></rect>
+                                        </svg>
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="9" height="9" rx="4.5" fill="#C0D8E0"></rect>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-6 sm:py-14 flex items-center justify-center">
+        <div class="container px-12 relative">
+            <div class="flex flex-col gap-1.5 items-center sm:items-start">
+                <div class="relative flex items-center w-full">
+                    <div class="flex-grow h-px bg-black"></div>
+                    <div class="mx-4">
+                        <a href="#">
+                            <button class="blue-bg w-14 h-14 rounded-full flex items-center justify-center">
+                                <span class="text-white text-4xl font-bold">Z</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="flex-grow h-px bg-black"></div>
+                </div>
+                <p class="text-secondary">Designed by<!-- -->
+                    <span class="text-primary">Zaid El Khobzi</span>
+                    <!-- -->• Distributed by<!-- -->
+                    <span class="text-primary">Zaid El Khobzi</span>
+                    <p>&copy; <span id="year"></span> Zaid El Khobzi. All rights reserved.</p>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

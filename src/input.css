@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer base {
+    button {
+        @apply cursor-pointer
+    }
+}
+
+@layer utilities {
+    .text-primary {
+        color: #1e30f3;
+    }
+    .text-secondary {
+        color: #868686
+    }
+    .bg-gradient {
+        background: linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+    }
+    .txt-gradient {
+        color: linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+    }
+    .blue-text {
+        color: #1e30f3;
+    }
+    .blue-bg {
+        background-color: #1e30f3;
+    }
+}
+
+/* #fe4300
+ */

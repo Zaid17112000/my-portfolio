@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- style.css -->
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+
+<body>
+    <header class="py-5">
+        <div class="container flex justify-between items-center px-12 mx-auto max-w-[1120px]">
+            <!-- <a href="#" class="blue-text font-bold text-xl">Zaid el khobzi</a> -->
+            <div class="flex justify-center items-center gap-x-7">
+                <a href="index.html">
+                    <button class="blue-bg w-14 h-14 rounded-full flex items-center justify-center">
+                        <span class="text-white text-4xl font-bold">Z</span>
+                    </button>
+                </a>
+                <a href="./public/cv/CV_Resume_en.pdf" download
+                    class="relative overflow-hidden cursor-pointer h-14 flex items-center px-6 border border-[#1e30f3] rounded-full group">
+                    <span
+                        class="absolute inset-x-0 bottom-0 h-0 bg-[#1e30f3] transition-all duration-500 group-hover:h-full z-0"></span>
+                    <span
+                        class="relative z-10 text-xl font-medium text-black transition-colors duration-500 group-hover:text-white">
+                        Download PDF Resume
+                    </span>
+                </a>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex gap-x-5">
+                    <li><a href="index.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Home</a></li>
+                    <li><a href="#about" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">About</a></li>
+                    <li><a href="#experience" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Experience</a></li>
+                    <li><a href="#education-skills" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Education & Skills</a></li>
+                    <li><a href="./projects.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Projects</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger" class="block cursor-pointer md:hidden">
+                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+                    viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                </svg>
+            </div>
+        </div>
+        <nav class="hidden py-5 my-5 bg-[#f8f9fa]" id="mobile-menu">
+            <ul class="flex flex-col items-center gap-x-5 gap-y-5">
+                <li><a href="index.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Home</a></li>
+                <li><a href="#about" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">About</a></li>
+                <li><a href="#experience" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Experience</a></li>
+                <li><a href="#education-skills" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Education & Skills</a></li>
+                <li><a href="./projects.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="w-full h-full overflow-hidden bg-white dark:bg-black">
+        <div class="sm:px-20 px-6 flex flex-col gap-8 justify-center items-start">
+            <!-- Heading -->
+            <div class="w-fit sm:my-10 my-10">
+            </div>
+
+            <!-- Projects -->
+            <div class="flex flex-col gap-6 w-full">
+                <!-- Project 1: Inventory Management System -->
+                <div
+                    class="group hover:bg-green-400/10 rounded p-6 border-b border-gray-300 dark:border-gray-500 cursor-pointer transition">
+                    <div class="flex items-start gap-4">
+                        <p class="sm:text-5xl text-2xl font-bold flex-shrink-0 text-green-600 dark:text-green-400">01.
+                        </p>
+                        <div class="flex-1 flex flex-col gap-3">
+                            <h2 class="sm:text-4xl text-xl font-bold dark:text-white">Inventory Management System</h2>
+                            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                                <li>Managed medication and suppliers</li>
+                                <li>Management of the basket and the order process</li>
+                                <li>Authentication and user management via Laravel Breeze</li>
+                                <li>Interactive dashboard for activity tracking</li>
+                                <li>Generation of detailed reports (sales, stock, suppliers)</li>
+                                <li>A responsive and user-friendly interface for a better user experience</li>
+                            </ul>
+                            <a target="_blank" href="https://github.com/Zaid17112000/inventory_management_system"
+                                class="mt-2 text-green-600 dark:text-green-400 font-semibold sm:text-lg hover:underline">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Blog -->
+                <div
+                    class="group hover:bg-green-400/10 rounded p-6 border-b border-gray-300 dark:border-gray-500 cursor-pointer transition">
+                    <div class="flex items-start gap-4">
+                        <p class="sm:text-5xl text-2xl font-bold flex-shrink-0 text-green-600 dark:text-green-400">02.
+                        </p>
+                        <div class="flex-1 flex flex-col gap-3">
+                            <h2 class="sm:text-4xl text-xl font-bold dark:text-white">Blog</h2>
+                            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                                <li>Create, edit, update, and delete posts with a user-friendly interface</li>
+                                <li>JWT-based authentication for secure login and access control</li>
+                                <li>Follow other users to see their posts and activities</li>
+                                <li>Comment on and like posts to engage with content</li>
+                                <li>Filter and view posts by category</li>
+                                <li>Backend implemented in PHP with JWT validation for secure sessions</li>
+                            </ul>
+                            <a target="_blank" href="https://github.com/Zaid17112000/Blog"
+                                class="mt-2 text-green-600 dark:text-green-400 font-semibold sm:text-lg hover:underline">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Farha Tickets -->
+                <div
+                    class="group hover:bg-green-400/10 rounded p-6 border-b border-gray-300 dark:border-gray-500 cursor-pointer transition">
+                    <div class="flex items-start gap-4">
+                        <p class="sm:text-5xl text-2xl font-bold flex-shrink-0 text-green-600 dark:text-green-400">03.
+                        </p>
+                        <div class="flex-1 flex flex-col gap-3">
+                            <h2 class="sm:text-4xl text-xl font-bold dark:text-white">Farha Tickets</h2>
+                            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                                <li>Gestion des événements d’une association culturelle</li>
+                            </ul>
+                            <a target="_blank" href="https://github.com/Zaid17112000/farha-tickets-zaidelkhobzi"
+                                class="mt-2 text-green-600 dark:text-green-400 font-semibold sm:text-lg hover:underline">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Restaurant API -->
+                <div
+                    class="group hover:bg-green-400/10 rounded p-6 dark:border-gray-500 cursor-pointer transition">
+                    <div class="flex items-start gap-4">
+                        <p class="sm:text-5xl text-2xl font-bold flex-shrink-0 text-green-600 dark:text-green-400">04.
+                        </p>
+                        <div class="flex-1 flex flex-col gap-3">
+                            <h2 class="sm:text-4xl text-xl font-bold dark:text-white">Restaurant API</h2>
+                            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                                <li>Explore a list of restaurants with key information (name, cuisine, rating, contact, website)</li>
+                                <li>Search and filter restaurants by name, cuisine type, or rating</li>
+                                <li>Restaurant details page showing full information and images</li>
+                                <li>Admin page for managing restaurants: add, delete, search, and optionally modify entries</li>
+                                <li>Data structured in JSON and served via a REST API (GET/POST/DELETE)</li>
+                                <li>Front-end built with HTML, CSS, and JavaScript consuming the API</li>
+                                <li>APIs tested and verified using tools like Postman</li>
+                            </ul>
+                            <a target="_blank" href="https://github.com/Zaid17112000/Restaurant-API"
+                                class="mt-2 text-green-600 dark:text-green-400 font-semibold sm:text-lg hover:underline">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <footer class="py-6 sm:py-14 flex items-center justify-center">
+        <div class="container px-12 relative">
+            <div class="flex flex-col gap-1.5 items-center sm:items-start">
+                <div class="relative flex items-center w-full">
+                    <div class="flex-grow h-px bg-black"></div>
+                    <div class="mx-4">
+                        <a href="#">
+                            <button class="blue-bg w-14 h-14 rounded-full flex items-center justify-center">
+                                <span class="text-white text-4xl font-bold">Z</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="flex-grow h-px bg-black"></div>
+                </div>
+                <p class="text-secondary">Designed by<!-- -->
+                    <span class="text-primary">Zaid El Khobzi</span>
+                    <!-- -->• Distributed by<!-- -->
+                    <span class="text-primary">Zaid El Khobzi</span>
+                <p>&copy; <span id="year"></span> Zaid El Khobzi. All rights reserved.</p>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!--  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
