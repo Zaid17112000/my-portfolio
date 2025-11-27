@@ -107,7 +107,7 @@
                     </button>
                 </a>
                 <a href="./public/cv/CV_Resume_en.pdf" download
-                    class="relative overflow-hidden cursor-pointer h-14 flex items-center px-6 border border-[#1e30f3] rounded-full group">
+                    class="relative overflow-hidden cursor-pointer h-14 flex items-center px-6 border border-[#1e30f3] rounded-full group [@media(width<=484px)]:hidden">
                     <span
                         class="absolute inset-x-0 bottom-0 h-0 bg-[#1e30f3] transition-all duration-500 group-hover:h-full z-0"></span>
                     <span
@@ -116,7 +116,7 @@
                     </span>
                 </a>
             </div>
-            <nav class="hidden md:block">
+            <nav class="hidden [@media(width>=888px)]:block">
                 <ul class="flex gap-x-5">
                     <li><a href="index.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Home</a></li>
                     <li><a href="#about" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">About</a></li>
@@ -125,7 +125,7 @@
                     <li><a href="./projects.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Projects</a></li>
                 </ul>
             </nav>
-            <div id="hamburger" class="block cursor-pointer md:hidden">
+            <div id="hamburger" class="block cursor-pointer [@media(width>=888px)]:hidden">
                 <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
                     viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -134,7 +134,7 @@
                 </svg>
             </div>
         </div>
-        <nav class="hidden py-5 my-5 bg-[#f8f9fa]" id="mobile-menu">
+        <nav class="hidden py-5 my-5 bg-[#f8f9fa] [@media(width>=888px)]:hidden" id="mobile-menu">
             <ul class="flex flex-col items-center gap-x-5 gap-y-5">
                 <li><a href="index.html" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">Home</a></li>
                 <li><a href="#about" class="text-[#0000008c] text-sm font-bold hover:text-[#212529]">About</a></li>
@@ -170,7 +170,7 @@
                         <h1 class="pb-5 max-w-[340px] text-5xl font-bold bg-gradient max-[1029.34px]:max-w-full"
                             style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Get online and
                             grow fast</h1> -->
-                        <div>
+                        <div class="flex">
                             <a href="./public/cv/CV_Resume_en.pdf" download>
                                 <button
                                     class="py-3 px-9 mr-5 rounded-[10px] blue-bg text-white text-[11px] font-bold">Resume</button>
@@ -568,7 +568,7 @@
 
         <section id="contact-details" class="mt-5">
             <div class="border-t border-[#f0f0f0]">
-                <div class="container px-12">
+                <div class="container px-12 max-w-full">
                     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-6 md:py-7">
                         <div
                             class="flex flex-wrap items-center justify-center md:justify-start gap-1.5 md:gap-5 lg:gap-11">
@@ -608,7 +608,7 @@
         </section>
 
         <section id="about">
-            <div class="container px-12 relative bg-[#F0F0F0] py-10 md:py-32">
+            <div class="container px-12 relative bg-[#F0F0F0] py-10 md:py-32 max-w-full">
                 <div class="absolute top-0 w-full px-9">
                     <img alt="resume-bg-img" loading="lazy" width="1200" height="348" decoding="async" data-nimg="1"
                         class="w-full" style="color:transparent" src="./public/images/home/about-me/resume-bg-img.svg">
@@ -616,7 +616,7 @@
                 <div class="relative z-10">
                     <div class="container">
                         <div class="flex items-center justify-between gap-2 border-b border-black pb-7">
-                            <h2 class="text-[3.75rem] font-bold">About Me</h2>
+                            <h2 class="text-[3.75rem] [@media(width<=468px)]:text-3xl font-bold">About Me</h2>
                             <p class="text-xl text-primary">( 01 )</p>
                         </div>
                         <div class="pt-10 xl:pt-16 flex gap-10 items-center justify-between">
@@ -660,9 +660,9 @@
 
         <section id="experience">
             <div>
-                <div class="container px-12 relative py-10 md:py-32">
+                <div class="container px-12 relative py-10 md:py-32 max-w-full">
                     <div class="flex items-center justify-between gap-2 border-b border-black pb-7 mb-9 md:mb-16">
-                        <h2 class="text-[3.75rem] font-bold">Experience</h2>
+                        <h2 class="text-[3.75rem] [@media(width<=468px)]:text-3xl font-bold">Experience</h2>
                         <p class="text-xl text-primary">( 02 )</p>
                     </div>
                     <div class="space-y-7 md:space-y-12">
@@ -747,13 +747,13 @@
 
         <section id="education-skills">
             <div class="border-t border-softGray overflow-hidden">
-                <div class="container px-12 relative py-10 md:py-32">
+                <div class="container px-12 relative py-10 md:py-32 max-w-full">
                     <img alt="vector" loading="lazy" width="260" height="170" decoding="async" data-nimg="1"
                         class="no-print absolute top-0 left-0 transform -translate-y-1/2" style="color:transparent"
                         src="./public/images/home/education-skill/edu-skill-vector.svg">
                     <div class="relative z-10">
                         <div class="flex items-center justify-between gap-2 border-b border-black pb-7 mb-9 xl:mb-16">
-                            <h2 class="text-[3.75rem] font-bold">Education &amp; Skills</h2>
+                            <h2 class="text-[3.75rem] [@media(width<=468px)]:text-3xl font-bold">Education &amp; Skills</h2>
                             <p class="text-xl text-primary">( 03 )</p>
                         </div>
                         <div class="flex flex-col lg:flex-row gap-10 xl:gap-20">
